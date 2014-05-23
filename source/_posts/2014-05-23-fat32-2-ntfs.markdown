@@ -1,0 +1,18 @@
+---
+layout: post
+title: "无损转换Fat32>>>NTFS"
+date: 2014-05-23 15:58:27 +0800
+comments: true
+categories: PC
+---
+帮朋友重做电脑，发现硬盘分区居然是fat32的，<!-- more -->于是研究了下，发现以下命令可以无损转换为NTFS。
+
+
+* 依次选择“开始→运行”命令，在弹出对话框中输入“cmd”命令（或点“开始→程序→附件→命令”提示符），打开命令提示符窗口
+* 打开窗口以后，在光标的提示符下输入
+`convert disk:/FS:NTFS`
+（disk：驱动器,大小写均可）
+* 然后回车。注意在“convert”的后面有一个空格
+```
+如：convert f:/FS:NTFS //把F盘转换为NTFS格式
+```
