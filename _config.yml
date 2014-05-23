@@ -61,6 +61,8 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 # ----------------------- #
 #   3rd Party Settings    #
 # ----------------------- #
+# Weibo
+weibo_user: acexs
 
 # duoshuo comments
 duoshuo_comments: true
