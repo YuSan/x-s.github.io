@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Github | Xs Blog]]></title>
   <link href="http://x-s.github.io/blog/categories/github/atom.xml" rel="self"/>
   <link href="http://x-s.github.io/"/>
-  <updated>2014-05-23T17:40:59+08:00</updated>
+  <updated>2014-05-23T17:46:05+08:00</updated>
   <id>http://x-s.github.io/</id>
   <author>
     <name><![CDATA[Xs]]></name>
@@ -78,6 +78,16 @@ rake deploy #提交资源库
 <p>2.按照上面操作后，你的博客就已经成功上传至Github提供的静态页面了</p>
 
 <p>3.接下来需要将源码也上传至Github，这一步大家可以自行百度如何上传源码。</p>
+
+<h3>3. Octopress常用命令</h3>
+
+<p><code>
+rake generate               #生成静态页面
+rake preview                #本地预览博客(http://localhost:4000/)
+rake install['ThemeName']   #安装新主题
+rake new_post["PostName"]   #生成新的文章
+rake deploy                 #提交资源库
+</code></p>
 ]]></content>
   </entry>
   
