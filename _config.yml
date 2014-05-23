@@ -19,7 +19,7 @@ date_format: "ordinal"
 subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email: xsmumu@gmail.com
+email: 
 
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -61,6 +61,7 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 # ----------------------- #
 #   3rd Party Settings    #
 # ----------------------- #
+
 # Weibo
 weibo_user: acexs
 
