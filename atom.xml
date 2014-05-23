@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Xs Blog]]></title>
+  <link href="http://yoursite.com/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/"/>
+  <updated>2014-05-23T11:37:16+08:00</updated>
+  <id>http://yoursite.com/</id>
+  <author>
+    <name><![CDATA[Xs]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[在Github中搭建Octopress博客]]></title>
+    <link href="http://yoursite.com/blog/2014/05/23/installoctopressongithub/"/>
+    <updated>2014-05-23T11:10:42+08:00</updated>
+    <id>http://yoursite.com/blog/2014/05/23/installoctopressongithub</id>
+    <content type="html"><![CDATA[<p>测试</p>
+
+<p>dsadsadsaddas</p>
+
+<p>das</p>
+
+<p>dasasd</p>
+
+<p>asd</p>
+
+<p>asdsad</p>
+
+<p>sad
+sadasd
+asdasd</p>
+
+<p>asddas
+dsadsadsaddasd</p>
+
+<p>asdasdasd</p>
+
+<p>asdasdasdas
+dasdsa
+dasdsaasd</p>
+
+<p>asdasdasdasdas
+dasdsaasdasd</p>
+
+<p>asddasdsa
+dassad
+asddasa
+sda</p>
+
+<p>dasdsaasd</p>
+
+<p>&lt;!-more-></p>
+]]></content>
+  </entry>
+  
+</feed>
