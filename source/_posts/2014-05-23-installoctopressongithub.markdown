@@ -51,3 +51,13 @@ rake deploy #提交资源库
 2.按照上面操作后，你的博客就已经成功上传至Github提供的静态页面了
 
 3.接下来需要将源码也上传至Github，这一步大家可以自行百度如何上传源码。
+
+
+### 3. Octopress常用命令
+```
+rake generate               #生成静态页面
+rake preview                #本地预览博客(http://localhost:4000/)
+rake install['ThemeName']   #安装新主题
+rake new_post["PostName"]   #生成新的文章
+rake deploy                 #提交资源库
+```
