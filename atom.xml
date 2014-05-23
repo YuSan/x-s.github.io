@@ -4,7 +4,7 @@
   <title><![CDATA[Xs Blog]]></title>
   <link href="http://x-s.github.io/atom.xml" rel="self"/>
   <link href="http://x-s.github.io/"/>
-  <updated>2014-05-23T16:27:30+08:00</updated>
+  <updated>2014-05-23T17:40:59+08:00</updated>
   <id>http://x-s.github.io/</id>
   <author>
     <name><![CDATA[Xs]]></name>
@@ -551,10 +551,88 @@ PS:面团整形的时候，新手可能会遇到一不小心饼皮重叠或者�
     <link href="http://x-s.github.io/blog/2014/05/23/installoctopressongithub/"/>
     <updated>2014-05-23T11:10:42+08:00</updated>
     <id>http://x-s.github.io/blog/2014/05/23/installoctopressongithub</id>
-    <content type="html"><![CDATA[<!-- more -->
+    <content type="html"><![CDATA[<h1>在Windows操作系统下搭建Octopress博客</h1>
+
+<h2>准备工作</h2>
+
+<ul>
+<li>安装好Git环境</li>
+<li>Git Clone一份Octopress项目
+<code>git clone git://github.com/imathis/octopress.git octopress</code></li>
+<li>rubyinstaller和DevKit安装<a href="http://pan.baidu.com/s/1kT80UW3">点我下载</a></li>
+</ul>
 
 
-<p>测试</p>
+<!-- more -->
+
+
+<h2>开始安装</h2>
+
+<h3>1. 搭建本地博客</h3>
+
+<ol>
+<li>安装rubyinstaller，然后将Devkit解压到C盘根目录</li>
+<li>打开Ruby命令行窗口<code>Start Command Prompt with Ruby</code>，进入DevKit解压缩的目录，然后执行</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ruby dk.rb init
+</span><span class='line'>ruby dk.rb install
+</span><span class='line'>gem install rdiscount --platform=ruby</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>接下来进入Octopress目录，执行如下命令</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem sources -a http://ruby.taobao.org #添加淘宝源
+</span><span class='line'>gem sources -r http://rubygems.org    #移除官方源
+</span><span class='line'>gem souces -l
+</span><span class='line'>gem install bundler
+</span><span class='line'>bundle install #安装所需工具
+</span><span class='line'>rake install   #安装默认的Octopress模版
+</span><span class='line'>rake generate  #从源码生成静态页面
+</span><span class='line'>rake preview   #预览博客(http://localhost:4000/)</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>现在你的博客应该已经在本地搭建完成了</li>
+</ol>
+
+
+<h3>2. 上传至Github</h3>
+
+<ul>
+<li>以下操作都要在Git Bash下进行</li>
+<li>你的Github应该有一个<code>yourname.github.io</code>的仓库名，用来存储博客</li>
+</ul>
+
+
+<p>1.在Git Bash中输入如下代码</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake setup_github_pages #配置Github pages地址
+</span><span class='line'>rake generate #生成博客页面
+</span><span class='line'>rake deploy #提交资源库</span></code></pre></td></tr></table></div></figure>
+
+
+<p>2.按照上面操作后，你的博客就已经成功上传至Github提供的静态页面了</p>
+
+<p>3.接下来需要将源码也上传至Github，这一步大家可以自行百度如何上传源码。</p>
 ]]></content>
   </entry>
   
