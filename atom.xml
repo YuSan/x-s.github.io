@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Xs Blog]]></title>
-  <link href="http://yoursite.com/atom.xml" rel="self"/>
-  <link href="http://yoursite.com/"/>
-  <updated>2014-05-23T11:37:16+08:00</updated>
-  <id>http://yoursite.com/</id>
+  <link href="http://X-s.github.io/atom.xml" rel="self"/>
+  <link href="http://X-s.github.io/"/>
+  <updated>2014-05-23T11:51:50+08:00</updated>
+  <id>http://X-s.github.io/</id>
   <author>
     <name><![CDATA[Xs]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[在Github中搭建Octopress博客]]></title>
-    <link href="http://yoursite.com/blog/2014/05/23/installoctopressongithub/"/>
+    <link href="http://X-s.github.io/blog/2014/05/23/installoctopressongithub/"/>
     <updated>2014-05-23T11:10:42+08:00</updated>
-    <id>http://yoursite.com/blog/2014/05/23/installoctopressongithub</id>
+    <id>http://X-s.github.io/blog/2014/05/23/installoctopressongithub</id>
     <content type="html"><![CDATA[<p>测试</p>
 
 <p>dsadsadsaddas</p>
