@@ -1,0 +1,30 @@
+---
+layout: post
+title: "linux下用adb连接手机的问题解决"
+date: 2014-05-23 15:18:53 +0800
+comments: true
+categories: Linux
+---
+* 在ubuntu下，模拟器可以直接识别，使用adb也没有限制，但是手机插上usb之后，adb并不识别，显示的是问号，在eclipse里面也是这样。
+* 解决方法如下：
+
+<!-- more -->
+
+1.在`终端`中输入`lsusb`，可以看到很多BUS设备，很多都是`Linux Foundation 1.1 root hub`的，这是没有插上`usb`设备的端口，插上手机的端口会出现另外的字符串，比如我的是`High Tech Computer Corp`. 然后记下它的id：`0bb4:0c03`
+
+2.在/etc/udev/rules.d目录下新建一个51-android.rules文件，内容如下：
+```
+SUBSYSTEM==”usb|usb_device”, SYSFS{idVendor}==”0bb4″, MODE=”0660″,GROUP=”plugdev”
+SUBSYSTEM==”usb|usb_device”, ATTR{idVendor}==”0bb4″, ATTR{idProduct}==”0c03″, SYMLINK+=”android_adb”
+SUBSYSTEM==”usb|usb_device”, ATTR{idVendor}==”0bb4″, ATTR{idProduct}==”0c03″, SYMLINK+=”android_fastboot”
+```
+`这里的idVendor是第一步中记下的id`
+
+3.执行如下命令
+```
+sudo chmod a+r /etc/udev/rules.d/51-android.rules
+sudo adb kill-server
+sudo adb devices
+```
+
+* 然后就会发现 adb可以用了。
