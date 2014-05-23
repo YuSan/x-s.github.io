@@ -4,11 +4,11 @@
   <title><![CDATA[Xs Blog]]></title>
   <link href="http://x-s.github.io/atom.xml" rel="self"/>
   <link href="http://x-s.github.io/"/>
-  <updated>2014-05-23T15:20:47+08:00</updated>
+  <updated>2014-05-23T15:44:41+08:00</updated>
   <id>http://x-s.github.io/</id>
   <author>
     <name><![CDATA[Xs]]></name>
-    <email><![CDATA[xsmumu@gmail.com]]></email>
+    
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
