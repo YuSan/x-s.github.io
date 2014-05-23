@@ -2,15 +2,31 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://x-s.github.io/blog/2014/05/23/installoctopressongithub/</loc>
-        <lastmod>2014-05-23T12:47:51+08:00</lastmod>
+        <lastmod>2014-05-23T15:15:08+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://x-s.github.io/blog/2014/05/23/installjdk6/</loc>
+        <lastmod>2014-05-23T15:09:01+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://x-s.github.io/blog/2014/05/23/installlinux/</loc>
+        <lastmod>2014-05-23T15:14:47+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://x-s.github.io/blog/2014/05/23/pisa/</loc>
+        <lastmod>2014-05-23T15:18:12+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://x-s.github.io/blog/2014/05/23/linuxadb/</loc>
+        <lastmod>2014-05-23T15:20:41+08:00</lastmod>
     </url>
     <url>
         <loc>http://x-s.github.io/about/</loc>
-        <lastmod>2014-05-23T13:31:19+08:00</lastmod>
+        <lastmod>2014-05-23T15:06:33+08:00</lastmod>
     </url>
     <url>
         <loc>http://x-s.github.io/blog/archives/</loc>
-        <lastmod>2014-05-23T11:37:06+08:00</lastmod>
+        <lastmod>2014-05-23T15:20:41+08:00</lastmod>
     </url>
     <url>
         <loc>http://x-s.github.io/blog/categories/</loc>
@@ -18,7 +34,7 @@
     </url>
     <url>
         <loc>http://x-s.github.io/</loc>
-        <lastmod>2014-05-23T11:37:06+08:00</lastmod>
+        <lastmod>2014-05-23T15:20:41+08:00</lastmod>
     </url>
     <url>
         <loc>http://x-s.github.io/robots.txt</loc>

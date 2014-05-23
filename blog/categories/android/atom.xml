@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Android | Xs Blog]]></title>
+  <link href="http://x-s.github.io/blog/categories/android/atom.xml" rel="self"/>
+  <link href="http://x-s.github.io/"/>
+  <updated>2014-05-23T15:20:47+08:00</updated>
+  <id>http://x-s.github.io/</id>
+  <author>
+    <name><![CDATA[Xs]]></name>
+    <email><![CDATA[xsmumu@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[ Android开发环境搭建之sun-java6-jdk]]></title>
+    <link href="http://x-s.github.io/blog/2014/05/23/installjdk6/"/>
+    <updated>2014-05-23T15:07:16+08:00</updated>
+    <id>http://x-s.github.io/blog/2014/05/23/installjdk6</id>
+    <content type="html"><![CDATA[<ul>
+<li>现在的Ubuntu源默认已经没有sun-java6的安装包了</li>
+<li>所以需要手动下载来安装</li>
+</ul>
+
+
+<!-- more -->
+
+
+<ul>
+<li>方法如下：</li>
+<li>适用于64位Linux</li>
+</ul>
+
+
+<p>1、下载<code>jdk-6u45-linux-x64.bin</code>：</p>
+
+<p><a href="http://pan.baidu.com/s/11MLHE">点我下载</a></p>
+
+<p>2、将下载下来的文件放在任意位置，然后输入：
+<code>
+sudo chmod 777 jdk-6u45-linux-x64.bin
+./jdk-6u45-linux-x64.bin
+</code>
+   只要下载的jdk安装包没有损坏就能正常解压，最后会有<code>Done!</code>的提示</p>
+
+<p>3、接下来进入<code>jdk-6u45-linux-x64</code>目录，将里面的<code>bin</code>目录加入环境变量即可</p>
+
+<p>4、执行<code>java -version</code>查看是否安装成功</p>
+]]></content>
+  </entry>
+  
+</feed>

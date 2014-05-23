@@ -5,11 +5,12 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>在Github中搭建Octopress博客 - Xs Blog</title>
+	<title>linux下用adb连接手机的问题解决 - Xs Blog</title>
 	<meta name="author" content="Xs">
 
 	
-	<meta name="description" content="在Github中搭建Octopress博客 测试 <!-- --> Comments var duoshuoQuery = {short_name:"acexs"}; (function() { var ds = document.createElement('script'); ds.type &hellip;">
+	<meta name="description" content="Linux下用adb连接手机的问题解决 在ubuntu下，模拟器可以直接识别，使用adb也没有限制，但是手机插上usb之后，adb并不识别，显示的是问号，在eclipse里面也是这样。
+解决方法如下： 1.在终端中输入lsusb，可以看到很多BUS设备，很多都是Linux Foundation &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +20,7 @@
 
 	<link href="/atom.xml" rel="alternate" title="Xs Blog" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://x-s.github.io/blog/2014/05/23/installoctopressongithub/">
+	<link rel="canonical" href="http://x-s.github.io/blog/2014/05/23/linuxadb/">
 	<link href="/favicon.png" rel="shortcut icon">
 	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -83,11 +84,44 @@
 			
 			<div class="mid-col-container">
 				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-	<h1 class="title" itemprop="name">在Github中搭建Octopress博客</h1>
-	<div class="entry-content" itemprop="articleBody"><!-- more -->
+	<h1 class="title" itemprop="name">Linux下用adb连接手机的问题解决</h1>
+	<div class="entry-content" itemprop="articleBody"><ul>
+<li>在ubuntu下，模拟器可以直接识别，使用adb也没有限制，但是手机插上usb之后，adb并不识别，显示的是问号，在eclipse里面也是这样。</li>
+<li>解决方法如下：</li>
+</ul>
 
 
-<p>测试</p>
+<!-- more -->
+
+
+<p>1.在<code>终端</code>中输入<code>lsusb</code>，可以看到很多BUS设备，很多都是<code>Linux Foundation 1.1 root hub</code>的，这是没有插上<code>usb</code>设备的端口，插上手机的端口会出现另外的字符串，比如我的是<code>High Tech Computer Corp</code>. 然后记下它的id：<code>0bb4:0c03</code></p>
+
+<p>2.在/etc/udev/rules.d目录下新建一个51-android.rules文件，内容如下：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>SUBSYSTEM==”usb|usb_device”, SYSFS{idVendor}==”0bb4″, MODE=”0660″,GROUP=”plugdev”
+</span><span class='line'>SUBSYSTEM==”usb|usb_device”, ATTR{idVendor}==”0bb4″, ATTR{idProduct}==”0c03″, SYMLINK+=”android_adb”
+</span><span class='line'>SUBSYSTEM==”usb|usb_device”, ATTR{idVendor}==”0bb4″, ATTR{idProduct}==”0c03″, SYMLINK+=”android_fastboot”</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>这里的idVendor是第一步中记下的id</code></p>
+
+<p>3.执行如下命令</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo chmod a+r /etc/udev/rules.d/51-android.rules
+</span><span class='line'>sudo adb kill-server
+</span><span class='line'>sudo adb devices</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>然后就会发现 adb可以用了。</li>
+</ul>
+
 </div>
 
 </article>
