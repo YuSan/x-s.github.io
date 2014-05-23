@@ -62,6 +62,10 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 #   3rd Party Settings    #
 # ----------------------- #
 
+# duoshuo comments
+duoshuo_comments: true
+duoshuo_short_name: acexs
+
 # Github repositories
 github_user: X-s
 github_repo_count: 3
