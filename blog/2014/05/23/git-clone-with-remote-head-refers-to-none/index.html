@@ -5,13 +5,11 @@
 
 <head>
 	<meta charset="utf-8">
-	<title> - Xs Blog</title>
+	<title>git clone拉代码时提示warning: remote HEAD refers to none - Xs Blog</title>
 	<meta name="author" content="Xs">
 
 	
-	<meta name="description" content="About Me Xs常年混迹于网络，热衷于安卓系统的开发
-喜欢钻研各种电脑方面的技术
-爱旅游，爱生活 Contact Me 电子邮箱: &#x78;&#115;&#109;&#117;&#x6d;&#117;&#x40;&#103;&#109;&#97;&#x69;&#x6c;&#46;&# &hellip;">
+	<meta name="description" content="Git Clone拉代码时提示warning: Remote HEAD Refers to None 今天git clone我自己的代码的时候，在完成时提示warning: remote HEAD refers to nonexistent ref, unable to checkout！ &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -21,7 +19,7 @@
 
 	<link href="/atom.xml" rel="alternate" title="Xs Blog" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://x-s.github.io/about/">
+	<link rel="canonical" href="http://x-s.github.io/blog/2014/05/23/git-clone-with-remote-head-refers-to-none/">
 	<link href="/favicon.png" rel="shortcut icon">
 	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -84,38 +82,49 @@
 				
 			
 			<div class="mid-col-container">
-				<div id="content" class="inner"><article class="page">
-    
-    <h1 class="title"></h1>
-    
-    <div class="entry-content"><h1>About Me</h1>
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">Git Clone拉代码时提示warning: Remote HEAD Refers to None</h1>
+	<div class="entry-content" itemprop="articleBody"><p>今天git clone我自己的代码的时候，<!-- more -->在完成时提示<code>warning: remote HEAD refers to nonexistent ref, unable to checkout！</code></p>
 
-<ul>
-<li><code>Xs</code>常年混迹于网络，热衷于安卓系统的开发</li>
-<li>喜欢钻研各种电脑方面的技术</li>
-<li>爱旅游，爱生活</li>
-</ul>
+<p>百度了一下大意就是没有发现默认的HEAD文件，换言之没有找到可用分支。</p>
 
+<p>于是我在最后同步命令加上了<code>"-b cm-10.1"</code>再次clone，错误消失了。</p>
 
-<h1>Contact Me</h1>
-
-<ul>
-<li>电子邮箱: <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#x78;&#x73;&#x6d;&#x75;&#109;&#117;&#64;&#103;&#109;&#97;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;">&#x78;&#115;&#109;&#117;&#x6d;&#117;&#x40;&#103;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#109;</a>, <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#x38;&#55;&#57;&#x32;&#x34;&#56;&#x35;&#55;&#56;&#64;&#113;&#x71;&#x2e;&#x63;&#x6f;&#109;">&#x38;&#x37;&#57;&#x32;&#x34;&#56;&#x35;&#x37;&#56;&#x40;&#113;&#113;&#46;&#x63;&#111;&#109;</a></li>
-<li>新浪微博: <a href="http://weibo.com/acexs">小煞-Xs</a></li>
-</ul>
-
-
-<h1>About This Blog</h1>
-
-<ul>
-<li>Record life bit by bit&mdash;记录生活的点点滴滴</li>
-<li>Each Day is a new Begining&mdash;每天都是一个新的开始</li>
-</ul>
-
+<p>遇到这种错误可以尝试加上<code>"-b xxx"</code>xxx代表需要clone的分支，即可解决！</p>
 </div>
-</article>
-<!---->
 
+</article>
+<!--
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+-->
+
+
+  <section>
+    <h1>Comments</h1>
+    <div id="comments" aria-live="polite"><!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread"></div>
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"acexs"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+<!-- Duoshuo Comment END --></div>
+  </section>
 </div>
 			</div>
 			<footer id="footer" class="inner">Copyright &copy; 2014

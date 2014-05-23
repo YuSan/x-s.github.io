@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: PC | Xs Blog]]></title>
+  <link href="http://x-s.github.io/blog/categories/pc/atom.xml" rel="self"/>
+  <link href="http://x-s.github.io/"/>
+  <updated>2014-05-23T16:27:30+08:00</updated>
+  <id>http://x-s.github.io/</id>
+  <author>
+    <name><![CDATA[Xs]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[无损转换Fat32>>>NTFS]]></title>
+    <link href="http://x-s.github.io/blog/2014/05/23/fat32-2-ntfs/"/>
+    <updated>2014-05-23T15:58:27+08:00</updated>
+    <id>http://x-s.github.io/blog/2014/05/23/fat32-2-ntfs</id>
+    <content type="html"><![CDATA[<p>帮朋友重做电脑，发现硬盘分区居然是fat32的，<!-- more -->于是研究了下，发现以下命令可以无损转换为NTFS。</p>
+
+<ul>
+<li>依次选择“开始→运行”命令，在弹出对话框中输入“cmd”命令（或点“开始→程序→附件→命令”提示符），打开命令提示符窗口</li>
+<li>打开窗口以后，在光标的提示符下输入
+<code>convert disk:/FS:NTFS</code>
+（disk：驱动器,大小写均可）</li>
+<li>然后回车。注意在“convert”的后面有一个空格
+<code>
+如：convert f:/FS:NTFS //把F盘转换为NTFS格式
+</code></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

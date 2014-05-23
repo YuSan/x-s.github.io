@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Android | Xs Blog]]></title>
   <link href="http://x-s.github.io/blog/categories/android/atom.xml" rel="self"/>
   <link href="http://x-s.github.io/"/>
-  <updated>2014-05-23T15:44:41+08:00</updated>
+  <updated>2014-05-23T16:27:30+08:00</updated>
   <id>http://x-s.github.io/</id>
   <author>
     <name><![CDATA[Xs]]></name>
@@ -12,6 +12,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[git clone拉代码时提示warning: remote HEAD refers to none]]></title>
+    <link href="http://x-s.github.io/blog/2014/05/23/git-clone-with-remote-head-refers-to-none/"/>
+    <updated>2014-05-23T16:02:54+08:00</updated>
+    <id>http://x-s.github.io/blog/2014/05/23/git-clone-with-remote-head-refers-to-none</id>
+    <content type="html"><![CDATA[<p>今天git clone我自己的代码的时候，<!-- more -->在完成时提示<code>warning: remote HEAD refers to nonexistent ref, unable to checkout！</code></p>
+
+<p>百度了一下大意就是没有发现默认的HEAD文件，换言之没有找到可用分支。</p>
+
+<p>于是我在最后同步命令加上了<code>"-b cm-10.1"</code>再次clone，错误消失了。</p>
+
+<p>遇到这种错误可以尝试加上<code>"-b xxx"</code>xxx代表需要clone的分支，即可解决！</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ZIP刷机包加密和解密]]></title>
+    <link href="http://x-s.github.io/blog/2014/05/23/cryptionzip/"/>
+    <updated>2014-05-23T15:47:18+08:00</updated>
+    <id>http://x-s.github.io/blog/2014/05/23/cryptionzip</id>
+    <content type="html"><![CDATA[<p>最近下了一个ZIP刷机包发现居然不能解压缩，可是正常刷入却没有任何问题</p>
+
+<!-- more -->
+
+
+<p>研究了一下发现原来是采用了<code>ZipCenOp.jar</code>这个东西来加密和解密ZIP包的，而且只是一种伪加密方式</p>
+
+<p>于是编写了一个脚本来快速加密和解密这种伪ZIP包</p>
+
+<p>文件提供在这里,<a href="http://pan.baidu.com/s/1jGhyzIY">点我下载</a></p>
+
+<p><img src="/media/2014-05-23-cryptionzip/1.jpg" alt="" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[ Android开发环境搭建之sun-java6-jdk]]></title>
